@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 28, 2017, 2:31:31 AM
+    Author     : Ekiyor Odoko
+*/
+
+.root{
+    -fx-background-color: #dcedc8;
+}
+
+.button{
+    -fx-background-color: #aed581;
+    -fx-text-fill: #555a32;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 14px;
+}
+
+.button:hover{
+    -fx-background-color: #555a32/*ab1e1e*/;
+    -fx-text-fill: #555a32;
+    -fx-font-family: "Century Gothic";
+    -fx-text-fill: #dcedc8
+}
+
+/*This is an FXMLDocument id*/
+#btn_close:hover{
+    -fx-background-color: #ab1e1e;
+}
+
+
+#header_label{
+    -fx-text-fill: #dcedc8;
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+    -fx-text-align: justify;
+    -fx-background-color: #555a32;
+
+}
+
+#rect{
+    -fx-background-color: #a9d775;
+    /*-fx-filter: alpha(opacity=80);*/ 
+}
+
+#sigup_rectBig{
+    -fx-background-color: #555a32;
+}
+
+#header_label2{
+    -fx-text-fill: #dcedc8;
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+    -fx-text-align: justify;
+    -fx-background-color: #555a32;
+}
+
+
+
+
+
