@@ -96,7 +96,7 @@ public class After_log_InController implements Initializable {
     }
 
     private void logOut(ActionEvent event) throws IOException {
-        Stage stage=(Stage) btn_logOut.getScene().getWindow();
+        Stage stage=(Stage) search_btn.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass()
                 .getResource("LogOut.fxml"));
         Scene scene1 = new Scene(root2);
@@ -151,11 +151,12 @@ public class After_log_InController implements Initializable {
     }
 
     @FXML
-    private void logoutFromMenu(ActionEvent event) {
-        Stage stage=(Stage) btn_logOut.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass()
-                .getResource("LogOut.fxml"));
+    private void logoutFromMenu(ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+        Parent root2 = (Parent) fxmlLoad.load();
         Scene scene1 = new Scene(root2);
+        Stage stage = new Stage();
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         stage.show();
     }
