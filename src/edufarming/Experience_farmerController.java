@@ -47,14 +47,9 @@ public class Experience_farmerController implements Initializable {
     @FXML
     private Button btn_addInfo;
     @FXML
-    private Button btn_nextPage;
-    @FXML
-    private Button btn_prevPage;
-    @FXML
     private Button btn_back;
     @FXML
     private TextArea textArea;
-    private Button btn_logOut;
     @FXML
     private Text txt_DisplayName;
     String firName = "";
@@ -72,10 +67,6 @@ public class Experience_farmerController implements Initializable {
     private MenuItem expFarmExit_btn;
     @FXML
     private MenuItem expOnlRes_menu;
-    @FXML
-    private MenuItem aboutEduFarm;
-    @FXML
-    private MenuItem aboutCompany_menu;
 
     /**
      * Initializes the controller class.
@@ -120,15 +111,6 @@ public class Experience_farmerController implements Initializable {
         stage.show();
     }
 
-
-    private void logOut(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btn_logOut.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass()
-                .getResource("LogOut.fxml"));
-        Scene scene1 = new Scene(root2);
-        stage.setScene(scene1);
-        stage.show();
-    }
 
     @FXML
     private void back(ActionEvent event) throws IOException {
@@ -205,7 +187,7 @@ public class Experience_farmerController implements Initializable {
 
     @FXML
     private void goToHomePaage(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btn_logOut.getScene().getWindow();
+        Stage stage = (Stage) search_btn.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass().getResource("Experience_farmerController.fxml"));
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
@@ -215,8 +197,9 @@ public class Experience_farmerController implements Initializable {
 
     @FXML
     private void logoutFromMenu(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btn_logOut.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("LogOut.fxml"));
+        Stage stage =(Stage) search_btn.getScene().getWindow();
+        FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+        Parent root2 = (Parent) fxmlLoad.load();
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
@@ -232,13 +215,5 @@ public class Experience_farmerController implements Initializable {
     private void goOnline(ActionEvent event) {
     }
 
-    @FXML
-    private void viewAboutApp(ActionEvent event) {
-    }
-
-    @FXML
-    private void viewAboutCompany(ActionEvent event) {
-        
-    }
 
 }
