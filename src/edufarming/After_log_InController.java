@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -34,8 +35,6 @@ public class After_log_InController implements Initializable {
     private ImageView logo;
     @FXML
     private TextField txt_search;
-    @FXML
-    private Button btn_logOut;
     @FXML
     private Button btn_FAQs;
     @FXML
@@ -55,6 +54,20 @@ public class After_log_InController implements Initializable {
     String lasName="";
     @FXML
     private Text txt_DisplayName;
+    @FXML
+    private Button search_btn;
+    @FXML
+    private MenuItem hm_page;
+    @FXML
+    private MenuItem expfarmLogout_btn;
+    @FXML
+    private MenuItem expFarmExit_btn;
+    @FXML
+    private MenuItem expOnlRes_menu;
+    @FXML
+    private MenuItem aboutEduFarm;
+    @FXML
+    private MenuItem aboutCompany_menu;
 
     /**
      * Initializes the controller class.
@@ -82,7 +95,6 @@ public class After_log_InController implements Initializable {
     
     }
 
-    @FXML
     private void logOut(ActionEvent event) throws IOException {
         Stage stage=(Stage) btn_logOut.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass()
@@ -129,6 +141,40 @@ public class After_log_InController implements Initializable {
     public void setUsername(){
         txt_DisplayName.setText(firName+"."+lasName.charAt(0));
 }
+
+    @FXML
+    private void search(ActionEvent event) {
+    }
+
+    @FXML
+    private void goToHomePaage(ActionEvent event) {
+    }
+
+    @FXML
+    private void logoutFromMenu(ActionEvent event) {
+        Stage stage=(Stage) btn_logOut.getScene().getWindow();
+        Parent root2 = FXMLLoader.load(getClass()
+                .getResource("LogOut.fxml"));
+        Scene scene1 = new Scene(root2);
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void exitFromMenu(ActionEvent event) {
+    }
+
+    @FXML
+    private void goOnline(ActionEvent event) {
+    }
+
+    @FXML
+    private void viewAboutApp(ActionEvent event) {
+    }
+
+    @FXML
+    private void viewAboutCompany(ActionEvent event) {
+    }
 
     
 }

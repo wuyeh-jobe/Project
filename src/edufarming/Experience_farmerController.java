@@ -238,6 +238,7 @@ public class Experience_farmerController implements Initializable {
 
     @FXML
     private void viewAboutCompany(ActionEvent event) {
+        
     }
 
 }
