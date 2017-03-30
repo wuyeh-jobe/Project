@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 28, 2017, 5:59:12 PM
+    Author     : Study
+*/
+
+#searchField { 
+  -fx-background-color:#555a32;
+}
+#textArea {
+  -fx-background-color: #a9d775;
+  -fx-text-align: center;
+  -fx-color: red;
+  
+}
+#txt_search{
+    -fx-border-radius: 2px;
+    -fx-border-color: #aed581;
+}
+#search_btn{
+    -fx-border-radius: 6px;
+}
+
