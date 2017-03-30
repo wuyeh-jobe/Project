@@ -9,17 +9,17 @@ and open the template in the editor.
 */
 
 #searchField { 
-  -fx-background-color:aquamarine;
+  -fx-background-color:#555a32;
 }
 #textArea {
-  -fx-background-color:aquamarine;
+  -fx-background-color: #a9d775;
   -fx-text-align: center;
   -fx-color: red;
   
 }
 #txt_search{
     -fx-border-radius: 2px;
-    -fx-border-color: greenyellow;
+    -fx-border-color: #aed581;
 }
 #search_btn{
     -fx-border-radius: 6px;

@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,6 +21,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -39,15 +41,11 @@ public class Experience_farmerController implements Initializable {
     @FXML
     private TextField txt_search;
     @FXML
-    private Button btn_animalFarming;
-    @FXML
     private Button btn_farmsDatabase;
     @FXML
     private Button btn_inventoryKeeping;
     @FXML
     private Button btn_addInfo;
-    @FXML
-    private Button btn_viewInfo;
     @FXML
     private Button btn_nextPage;
     @FXML
@@ -56,7 +54,6 @@ public class Experience_farmerController implements Initializable {
     private Button btn_back;
     @FXML
     private TextArea textArea;
-    @FXML
     private Button btn_logOut;
     @FXML
     private Text txt_DisplayName;
@@ -67,6 +64,18 @@ public class Experience_farmerController implements Initializable {
     @FXML
     private VBox searchField;
     java.sql.Connection conn = null;
+    @FXML
+    private MenuItem hm_page;
+    @FXML
+    private MenuItem expfarmLogout_btn;
+    @FXML
+    private MenuItem expFarmExit_btn;
+    @FXML
+    private MenuItem expOnlRes_menu;
+    @FXML
+    private MenuItem aboutEduFarm;
+    @FXML
+    private MenuItem aboutCompany_menu;
 
     /**
      * Initializes the controller class.
@@ -93,9 +102,6 @@ public class Experience_farmerController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void animFarm(ActionEvent event) {
-    }
 
     @FXML
     private void visitDatabase(ActionEvent event) {
@@ -114,11 +120,7 @@ public class Experience_farmerController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void viewSavedInfo(ActionEvent event) {
-    }
 
-    @FXML
     private void logOut(ActionEvent event) throws IOException {
         Stage stage = (Stage) btn_logOut.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass()
@@ -199,6 +201,43 @@ public class Experience_farmerController implements Initializable {
             textArea.setText("Search Results: ");
         }else
             textArea.setText("No results found: ");
+    }
+
+    @FXML
+    private void goToHomePaage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn_logOut.getScene().getWindow();
+        Parent root2 = FXMLLoader.load(getClass().getResource("Experience_farmerController.fxml"));
+        Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void logoutFromMenu(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn_logOut.getScene().getWindow();
+        Parent root2 = FXMLLoader.load(getClass().getResource("LogOut.fxml"));
+        Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void exitFromMenu(ActionEvent event) {
+        Platform.exit();
+    }
+
+    @FXML
+    private void goOnline(ActionEvent event) {
+    }
+
+    @FXML
+    private void viewAboutApp(ActionEvent event) {
+    }
+
+    @FXML
+    private void viewAboutCompany(ActionEvent event) {
     }
 
 }
