@@ -50,7 +50,7 @@ public class ForgotPasswordController implements Initializable {
     @FXML
     private Button btn_confirm;
     @FXML
-    private Label txt_error;
+    private Label errorAlert;
 
     /**
      * Initializes the controller class.
@@ -86,7 +86,7 @@ public class ForgotPasswordController implements Initializable {
            stage.show();
         }
         else{
-            txt_error.setText("Please check your details again");
+            errorAlert.setText("Please check your details again");
         }
     }
     

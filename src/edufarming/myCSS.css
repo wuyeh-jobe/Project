@@ -60,7 +60,15 @@ and open the template in the editor.
     -fx-background-color: #555a32;
 }
 
+.text{
+    -fx-background-color: #555a32;
+    -fx-text-fill: #a9d775;
+    
+}
 
+#btn_back:hover{
+    -fx-background-color: #ab1e1e;
+}
 
 
 

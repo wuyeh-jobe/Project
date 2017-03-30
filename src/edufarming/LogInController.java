@@ -74,6 +74,7 @@ public class LogInController implements Initializable {
                 FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("after_log_In.fxml"));
                 Parent root = (Parent)fxmlloader.load();
                 Scene scene1 = new Scene(root);
+                scene1.getStylesheets().add("myCSS.css");
                 stage.setScene(scene1);
                 After_log_InController al=fxmlloader.<After_log_InController>getController();
                 al.passOnInfo(fname, lname);
@@ -85,6 +86,7 @@ public class LogInController implements Initializable {
                 FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("experience_farmer.fxml"));
                 Parent root = (Parent)fxmlloader.load();
                 Scene scene1 = new Scene(root);
+                scene1.getStylesheets().add("myCSS.css");
                 stage.setScene(scene1);
                 Experience_farmerController ef=fxmlloader.<Experience_farmerController>getController();
                 ef.passOnInfo(fname, lname);
