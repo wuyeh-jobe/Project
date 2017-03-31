@@ -41,6 +41,8 @@ public class CertificateFXMLController implements Initializable {
     
     String firName="";
     String lasName="";
+    @FXML
+    private Button becomeExpFarmer;
     /**
      * Initializes the controller class.
      */
@@ -63,7 +65,7 @@ public class CertificateFXMLController implements Initializable {
     private void goToHomepage(ActionEvent event) throws IOException {
         System.out.println(score);
         Stage stage = (Stage) home_btn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("after_log_in.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -82,5 +84,15 @@ public class CertificateFXMLController implements Initializable {
     }
     public void setName(){
         name_lbl.setText(lasName + ", " + firName);//We will use wuyeh's passOn() mwthod to transfer the name of the user
+    }
+
+    @FXML
+    private void goToExpFarming(ActionEvent event) throws IOException {
+    
+        Stage stage = (Stage) home_btn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
@@ -10,9 +11,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.Quiz1Controller">
-   <children>
-      <TextArea layoutX="37.0" layoutY="128.0" prefHeight="471.0" prefWidth="662.0" />
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.Quiz1Controller">
+   <stylesheets>
+        <URL value="@myCSS.css" />
+    </stylesheets>
+    <children>
+      <TextArea editable="false" layoutX="37.0" layoutY="106.0" prefHeight="488.0" prefWidth="662.0" />
       <Text layoutX="69.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. In order for food to be classified as Organic Food, the farmer" />
       <RadioButton fx:id="rb1" layoutX="92.0" layoutY="182.0" mnemonicParsing="false" text="Cannot use genetically modified organisms, chemical fertilizers or synthetic pesticides">
          <toggleGroup>
@@ -40,22 +44,22 @@
          </toggleGroup></RadioButton>
       <RadioButton fx:id="rb10" layoutX="87.0" layoutY="508.0" mnemonicParsing="false" text="300mm (12 inches)" toggleGroup="$four" />
       <RadioButton fx:id="rb11" layoutX="87.0" layoutY="531.0" mnemonicParsing="false" text="500mm (20 inches)" toggleGroup="$four" />
-      <Button fx:id="btn_back" layoutX="512.0" layoutY="569.0" mnemonicParsing="false" onAction="#back" text="Back" />
-      <Button fx:id="btn_next" layoutX="619.0" layoutY="569.0" mnemonicParsing="false" onAction="#next" text="Next" />
-      <ImageView fx:id="logo" fitHeight="82.0" fitWidth="112.0" layoutX="35.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="btn_back" layoutX="512.0" layoutY="557.0" mnemonicParsing="false" onAction="#back" text="Previous" />
+      <Button fx:id="btn_next" layoutX="619.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <ImageView fx:id="logo" blendMode="MULTIPLY" fitHeight="58.0" fitWidth="76.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Text fill="#51cfaf" layoutX="210.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIZ" textAlignment="CENTER" wrappingWidth="285.13671875">
+      <Text fill="#51cfaf" layoutX="204.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIZ" textAlignment="CENTER" wrappingWidth="285.13671875">
          <font>
-            <Font name="System Bold Italic" size="30.0" />
+            <Font name="Century Gothic Bold" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="btn_logOut" layoutX="608.0" layoutY="42.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="104.0" text="Log Out" />
-      <Text fx:id="txt_DisplayName" layoutX="485.0" layoutY="61.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="peter" textAlignment="CENTER" wrappingWidth="94.13671875">
+      <Button fx:id="btn_logOut" layoutX="608.0" layoutY="5.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="104.0" text="Log Out" />
+      <Text fx:id="txt_DisplayName" layoutX="485.0" layoutY="27.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="94.13671875">
          <font>
-            <Font name="System Bold Italic" size="19.0" />
+            <Font name="Century Gothic Bold" size="14.0" />
          </font>
       </Text>
       <RadioButton fx:id="rb12" layoutX="91.0" layoutY="561.0" mnemonicParsing="false" text="200mm (8 inches)" toggleGroup="$four" />
