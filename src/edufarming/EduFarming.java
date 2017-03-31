@@ -26,6 +26,7 @@ public class EduFarming extends Application {
         Scene scene = new Scene(root);
         scene.getStylesheets().add("myCSS.css");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
