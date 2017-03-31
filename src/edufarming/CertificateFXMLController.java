@@ -67,7 +67,7 @@ public class CertificateFXMLController implements Initializable {
 
     @FXML
     private void goToHomepage(ActionEvent event) throws IOException {
-        System.out.println(score);
+        //System.out.println(score);
         Stage stage = (Stage) home_btn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("after_log_In.fxml"));
         Scene scene = new Scene(root);
