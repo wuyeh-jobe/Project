@@ -49,7 +49,7 @@ public class After_log_InController implements Initializable {
     private Button btn_infoOnAnimalInfo;
     @FXML
     private Label topicArea;
-    String firName="";
+    String firName=" ";
     String lasName="";
     @FXML
     private Text txt_DisplayName;
@@ -125,7 +125,8 @@ public class After_log_InController implements Initializable {
         firName = fName;
     }
     public void setUsername(){
-        txt_DisplayName.setText(firName+"."+lasName.charAt(0));
+        char[] newChar = lasName.toCharArray();
+        txt_DisplayName.setText(firName+"."+newChar[0]);
 }
 
 
