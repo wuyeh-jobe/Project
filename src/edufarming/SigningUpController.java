@@ -143,7 +143,7 @@ public class SigningUpController implements Initializable {
                     scene1.getStylesheets().add("myCSS.css");
                     stage.setScene(scene1);
                     After_log_InController al=fxmlloader.<After_log_InController>getController();
-                    al.passOnInfo(fname, lname);
+                    al.passOnInfo(txt_fname.getText(),txt_lname.getText());
                     al.setUsername();
                     stage.show();
                 }
@@ -155,7 +155,7 @@ public class SigningUpController implements Initializable {
                     scene1.getStylesheets().add("myCSS.css");
                     stage1.setScene(scene1);
                     Experience_farmerController ef=fxmlloader.<Experience_farmerController>getController();
-                    ef.passOnInfo(fname, lname);
+                    ef.passOnInfo(txt_fname.getText(),txt_lname.getText());
                     ef.setUsername();
                     stage1.show();
 
