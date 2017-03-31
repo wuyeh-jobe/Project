@@ -52,10 +52,5 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="admin_btn" layoutX="596.0" layoutY="14.0" mnemonicParsing="false" onAction="#admin" prefHeight="25.0" prefWidth="75.0" text="Admin" textFill="#ab1e1e">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
     </children>
 </AnchorPane>
