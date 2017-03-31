@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -104,7 +107,11 @@ public class SigningUpController implements Initializable {
     @FXML
     private void after_log_in(ActionEvent event) throws IOException {
         initialize();
-        
+        Calendar cal = Calendar.getInstance();
+        java.sql.Date dat =null;
+        cal.setTime( java.sql.Date.valueOf(txt_dateOfBirth.getValue()));
+            
+        int year=cal.get(Calendar.YEAR);
         char[] arr1 = txt_fname.getText().toCharArray();
         char[] arr2 = txt_lname.getText().toCharArray();
         String chx = "!@#$%^&*()";
@@ -116,6 +123,9 @@ public class SigningUpController implements Initializable {
         }
         if(test==true){
             txt_alert.setText("Special characters not allowed");
+        }
+        else if((year-2017)<18){
+            txt_alert.setText("Not for persons under 18!");
         }
         else{
         
