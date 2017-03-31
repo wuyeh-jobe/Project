@@ -38,8 +38,6 @@ public class After_log_InController implements Initializable {
     @FXML
     private ImageView logo;
     @FXML
-    private Button btn_FAQs;
-    @FXML
     private Button btn_infoFromExpFarmers;
     
     @FXML

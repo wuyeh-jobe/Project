@@ -49,6 +49,10 @@ public class CertificateFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        becomeExpFarmer.setDisable(false);
+        if(score<8){
+            becomeExpFarmer.setDisable(true);
+        }
         
     }    
 
