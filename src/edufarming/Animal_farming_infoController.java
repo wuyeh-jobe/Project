@@ -6,7 +6,10 @@
 package edufarming;
 
 import static edufarming.AddToTableController.conn;
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -20,6 +23,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import java.sql.*;
+import javafx.application.Platform;
+import javafx.scene.control.MenuItem;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -42,6 +48,16 @@ public class Animal_farming_infoController implements Initializable {
     String firName = "";
     
      int i=1;
+    @FXML
+    private Text txt_DisplayName;
+    @FXML
+    private MenuItem hm_page;
+    @FXML
+    private MenuItem expfarmLogout_btn;
+    @FXML
+    private MenuItem expFarmExit_btn;
+    @FXML
+    private MenuItem expOnlRes_menu;
 
     /**
      * Initializes the controller class.
@@ -151,6 +167,38 @@ public class Animal_farming_infoController implements Initializable {
     public void passOnInfo(String fName, String lName){
         lasName = lName;
         firName = fName;
+    }
+
+    @FXML
+    private void goToHomePaage(ActionEvent event) throws IOException {
+        Stage stage = (Stage) back_btn.getScene().getWindow();
+        Parent root2 = FXMLLoader.load(getClass().getResource("after_log_In.fxml"));
+        Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void logoutFromMenu(ActionEvent event) throws IOException {
+        Stage stage =(Stage) back_btn.getScene().getWindow();
+        FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+        Parent root2 = (Parent) fxmlLoad.load();
+        Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void exitFromMenu(ActionEvent event) {
+        Platform.exit();
+    }
+
+    @FXML
+    private void goOnline(ActionEvent event) throws URISyntaxException, IOException {
+        Desktop desktop = Desktop.getDesktop();
+        desktop.browse(new URI("http://almanac.com/advice"));//change this to animal
     }
     
 }
