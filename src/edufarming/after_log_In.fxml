@@ -35,7 +35,7 @@
          </font>
       </Text>
       <Button fx:id="btn_FAQs" layoutX="233.0" layoutY="374.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="287.0" text="FAQs" />
-      <Button fx:id="btn_infoFromExpFarmers" layoutX="233.0" layoutY="313.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="287.0" text="Information From Experienced Farmers" />
+      <Button fx:id="btn_infoFromExpFarmers" layoutX="233.0" layoutY="313.0" mnemonicParsing="false" onAction="#infoFromExpFarmers" prefHeight="28.0" prefWidth="287.0" text="Information From Experienced Farmers" />
       <Button fx:id="btn_infoOnAnimalInfo" layoutX="233.0" layoutY="255.0" mnemonicParsing="false" onAction="#animInfo" prefHeight="28.0" prefWidth="287.0" text="Information on Animal Farming" />
       <Button fx:id="btn_infoOnFarming" layoutX="233.0" layoutY="191.0" mnemonicParsing="false" onAction="#infoFarming" prefHeight="28.0" prefWidth="287.0" text="What is Farming?" />
       <Button fx:id="btn_quiz" layoutX="233.0" layoutY="437.0" mnemonicParsing="false" onAction="#startQuiz" prefHeight="28.0" prefWidth="287.0" text="Quiz" />

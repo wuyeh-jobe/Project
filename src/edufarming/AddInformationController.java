@@ -95,20 +95,28 @@ public class AddInformationController implements Initializable {
         try{
             FileInputStream fis = new FileInputStream(file);
             
-            PreparedStatement info = connect.prepareStatement("Insert into farmers_Info set title=?, information=?, image=?");
-            info.setString(1, title);
-            info.setString(2, input);
-            info.setBlob(3, fis);
+            PreparedStatement info = connect.prepareStatement("Insert into experience_farmer_info"
+                    + " set personName=?, title=?, information=?, image=?");
+            info.setString(1, firName+" "+lasName);
+            info.setString(2, title);
+            info.setString(3, input);
+            info.setBlob(4, fis);
             info.execute();
+            //System.out.print("why");
             
         }catch(Exception e){
+            System.out.println("hello");
             System.out.println(e.toString());
         }
         //takes the user back to experienced_farmer window
         Stage stage=(Stage) addinfo_btn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
-        Scene scene1 = new Scene(root);
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("experience_farmer.fxml"));
+        Parent root2 = (Parent)fxmlloader.load();     
+        Scene scene1 = new Scene(root2);
         stage.setScene(scene1);
+        Experience_farmerController ef=fxmlloader.<Experience_farmerController>getController();  
+        ef.passOnInfo(firName, lasName);
+        ef.setUsername();
         stage.show();
     }
 

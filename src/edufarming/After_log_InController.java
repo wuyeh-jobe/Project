@@ -85,7 +85,7 @@ public class After_log_InController implements Initializable {
     @FXML
     private void back(ActionEvent event) throws IOException {
         Stage stage=(Stage) btn_back.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("LogInController.fxml"));
+        Parent root2 = FXMLLoader.load(getClass().getResource("logIn.fxml"));
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
@@ -172,6 +172,20 @@ public class After_log_InController implements Initializable {
     private void goOnline(ActionEvent event) throws URISyntaxException, IOException {
         Desktop desktop = Desktop.getDesktop();
         desktop.browse(new URI("http://almanac.com/plants"));
+    }
+
+    @FXML
+    private void infoFromExpFarmers(ActionEvent event) throws IOException {
+        Stage stage=(Stage) btn_quiz.getScene().getWindow();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("farmersforum2.fxml"));
+        Parent root2 = (Parent)fxmlloader.load();     
+        Scene scene1 = new Scene(root2);
+        //scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        Farmersforum2Controller ac=fxmlloader.<Farmersforum2Controller>getController();  
+        ac.passOnInfo(firName, lasName);
+        ac.setInfo();
+        stage.show();
     }
 
 
