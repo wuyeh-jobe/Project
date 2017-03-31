@@ -39,11 +39,6 @@
       <Button fx:id="btn_infoOnAnimalInfo" layoutX="233.0" layoutY="255.0" mnemonicParsing="false" onAction="#animInfo" prefHeight="28.0" prefWidth="287.0" text="Information on Animal Farming" />
       <Button fx:id="btn_infoOnFarming" layoutX="233.0" layoutY="191.0" mnemonicParsing="false" onAction="#infoFarming" prefHeight="28.0" prefWidth="287.0" text="What is Farming?" />
       <Button fx:id="btn_quiz" layoutX="233.0" layoutY="437.0" mnemonicParsing="false" onAction="#startQuiz" prefHeight="28.0" prefWidth="287.0" text="Quiz" />
-      <Button fx:id="btn_back" layoutX="37.0" layoutY="545.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="75.0" text="Back" textFill="#ab1e1e">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
       <Label fx:id="topicArea" alignment="CENTER" layoutX="253.0" layoutY="36.0" prefHeight="43.0" prefWidth="247.0" style="-fx-text-fill: #a9d755;" text="Farmers: Beginner">
          <font>
             <Font name="Century Gothic Bold" size="26.0" />

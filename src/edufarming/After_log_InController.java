@@ -46,7 +46,6 @@ public class After_log_InController implements Initializable {
     private Button btn_infoOnFarming;
     @FXML
     private Button btn_quiz;
-    @FXML
     private Button btn_back;
     @FXML
     private Button btn_infoOnAnimalInfo;
@@ -82,16 +81,7 @@ public class After_log_InController implements Initializable {
         }
     }    
 
-    @FXML
-    private void back(ActionEvent event) throws IOException {
-        Stage stage=(Stage) btn_back.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("logIn.fxml"));
-        Scene scene1 = new Scene(root2);
-        scene1.getStylesheets().add("myCSS.css");
-        stage.setScene(scene1);
-        stage.show();
-    
-    }
+
     
     @FXML
     private void infoFarming(ActionEvent event) throws IOException {

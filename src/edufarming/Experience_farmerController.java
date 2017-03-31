@@ -49,7 +49,6 @@ public class Experience_farmerController implements Initializable {
     private Button btn_inventoryKeeping;
     @FXML
     private Button btn_addInfo;
-    @FXML
     private Button btn_back;
     @FXML
     private TextArea textArea;
@@ -125,17 +124,6 @@ public class Experience_farmerController implements Initializable {
         stage.show();
     }
 
-
-    @FXML
-    private void back(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btn_back.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass()
-                .getResource("logIn.fxml"));
-        Scene scene1 = new Scene(root2);
-        scene1.getStylesheets().add("myCSS.css");
-        stage.setScene(scene1);
-        stage.show();
-    }
 
     public void passOnInfo(String fName, String lName) {
         lasName = lName;

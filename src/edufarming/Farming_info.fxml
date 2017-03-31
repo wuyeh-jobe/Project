@@ -15,33 +15,33 @@
         <URL value="@myCSS.css" />
     </stylesheets>
     <children>
-      <AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="617.0">
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#406f55" height="409.0" layoutX="-1.0" layoutY="87.0" opacity="0.26" stroke="BLACK" strokeType="INSIDE" width="619.0" />
-            <Label layoutX="143.0" layoutY="7.0" prefHeight="42.0" prefWidth="331.0" style="-fx-text-fill: #a9d755;" text=" General Farming Information">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#406f55" height="435.0" layoutX="-1.0" layoutY="87.0" opacity="0.26" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+            <Label alignment="CENTER" layoutX="187.0" layoutY="6.0" prefHeight="42.0" prefWidth="331.0" style="-fx-text-fill: #a9d755;" text=" General Farming Information">
                <font>
                   <Font name="Century Gothic Bold" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="topicFarm" layoutX="143.0" layoutY="44.0" prefHeight="34.0" prefWidth="318.0" style="-fx-text-fill: #a9d755;">
+            <Label fx:id="topicFarm" layoutX="194.0" layoutY="44.0" prefHeight="34.0" prefWidth="318.0" style="-fx-text-fill: #a9d755;">
                <font>
                   <Font name="Century Gothic Bold" size="19.0" />
                </font>
             </Label>
-            <TextArea fx:id="text_Area_farm" editable="false" layoutX="62.0" layoutY="125.0" prefHeight="348.0" prefWidth="493.0">
+            <TextArea fx:id="text_Area_farm" editable="false" layoutX="62.0" layoutY="125.0" prefHeight="365.0" prefWidth="580.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextArea>
-            <Button fx:id="next" layoutX="372.0" layoutY="512.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="94.0" text="Next" />
-            <Button fx:id="prev" layoutX="487.0" layoutY="512.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="25.0" prefWidth="80.0" text="Previous" />
+            <Button fx:id="next" layoutX="474.0" layoutY="538.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="94.0" text="Next" />
+            <Button fx:id="prev" layoutX="589.0" layoutY="538.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="25.0" prefWidth="80.0" text="Previous" />
             <ImageView fitHeight="116.0" fitWidth="107.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView blendMode="MULTIPLY" fitHeight="61.0" fitWidth="80.0" layoutY="6.0">
                <image>
                   <Image url="@logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="back_btn" layoutX="32.0" layoutY="512.0" mnemonicParsing="false" onAction="#backOpt" prefHeight="25.0" prefWidth="80.0" text="Back" />
+            <Button fx:id="back_btn" layoutX="32.0" layoutY="538.0" mnemonicParsing="false" onAction="#backOpt" prefHeight="25.0" prefWidth="80.0" text="Back" />
          </children>
       </AnchorPane>
    </children>

@@ -1,38 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.Animal_farming_infoController">
-   <children>
-      <Label layoutX="176.0" layoutY="44.0" prefHeight="42.0" prefWidth="311.0" style="-fx-text-fill: #a9d755;" text=" Animal Farming Information">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.Animal_farming_infoController">
+   <stylesheets>
+        <URL value="@myCSS.css" />
+   </stylesheets>
+    <children>
+      <Label layoutX="195.0" layoutY="33.0" prefHeight="42.0" prefWidth="311.0" style="-fx-text-fill: #a9d755;" text=" Animal Farming Information">
          <font>
             <Font name="Century Gothic Bold" size="22.0" />
          </font>
       </Label>
-      <Label fx:id="topicAnim" layoutX="216.0" layoutY="102.0" prefHeight="34.0" prefWidth="203.0" style="-fx-text-fill: #a9d755;">
+      <Label fx:id="topicAnim" layoutX="249.0" layoutY="75.0" prefHeight="34.0" prefWidth="203.0" style="-fx-text-fill: #a9d755;">
          <font>
             <Font name="Century Gothic Bold" size="19.0" />
          </font>
       </Label>
-      <TextArea fx:id="text_Area_anim" editable="false" layoutX="85.0" layoutY="144.0" prefHeight="361.0" prefWidth="493.0">
+      <TextArea fx:id="text_Area_anim" editable="false" layoutX="82.0" layoutY="120.0" prefHeight="361.0" prefWidth="537.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextArea>
-      <Button fx:id="next" layoutX="372.0" layoutY="512.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="94.0" text="Next" />
-      <Button fx:id="prev" layoutX="487.0" layoutY="512.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="25.0" prefWidth="80.0" text="Previous" />
-      <ImageView fitHeight="116.0" fitWidth="107.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView blendMode="MULTIPLY" fitHeight="78.0" fitWidth="105.0" layoutX="5.0" layoutY="5.0">
+      <Button fx:id="next" layoutX="565.0" layoutY="520.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="94.0" text="Next" />
+      <Button fx:id="prev" layoutX="473.0" layoutY="520.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="25.0" prefWidth="80.0" text="Previous" />
+      <ImageView blendMode="MULTIPLY" fitHeight="70.0" fitWidth="94.0" layoutY="27.0">
          <image>
             <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="back_btn" layoutX="32.0" layoutY="512.0" mnemonicParsing="false" onAction="#backOpt" prefHeight="25.0" prefWidth="80.0" text="Back" />
+      <Button fx:id="back_btn" layoutX="32.0" layoutY="520.0" mnemonicParsing="false" onAction="#backOpt" prefHeight="25.0" prefWidth="80.0" text="Back" />
+      <Text fx:id="txt_DisplayName" fill="#86b85b" layoutX="590.0" layoutY="19.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="135.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <MenuBar accessibleRole="BUTTON" layoutX="-1.0" prefHeight="25.0" prefWidth="553.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Program">
+               <items>
+                  <MenuItem fx:id="hm_page" mnemonicParsing="false" onAction="#goToHomePaage" text="Homepage" />
+                  <MenuItem fx:id="expfarmLogout_btn" mnemonicParsing="false" onAction="#logoutFromMenu" text="Logout" />
+                  <MenuItem fx:id="expFarmExit_btn" mnemonicParsing="false" onAction="#exitFromMenu" text="Exit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tools">
+               <items>
+                  <MenuItem fx:id="expOnlRes_menu" mnemonicParsing="false" onAction="#goOnline" text="Online Resources" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
