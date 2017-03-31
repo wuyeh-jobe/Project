@@ -71,12 +71,6 @@
                   <MenuItem fx:id="expOnlRes_menu" mnemonicParsing="false" onAction="#goOnline" text="Online Resources" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="About">
-               <items>
-                  <MenuItem fx:id="aboutEduFarm" mnemonicParsing="false" onAction="#viewAboutApp" text="EduFarming App" />
-                  <MenuItem fx:id="aboutCompany_menu" mnemonicParsing="false" onAction="#viewAboutCompany" text="EduFarming Incorporated" />
-               </items>
-            </Menu>
          </menus>
       </MenuBar>
    </children>

@@ -6,9 +6,13 @@
 package edufarming;
 
 import static edufarming.AddToTableController.conn;
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,10 +68,6 @@ public class After_log_InController implements Initializable {
     private MenuItem expFarmExit_btn;
     @FXML
     private MenuItem expOnlRes_menu;
-    @FXML
-    private MenuItem aboutEduFarm;
-    @FXML
-    private MenuItem aboutCompany_menu;
 
     /**
      * Initializes the controller class.
@@ -90,18 +90,10 @@ public class After_log_InController implements Initializable {
         Stage stage=(Stage) btn_back.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         stage.show();
     
-    }
-
-    private void logOut(ActionEvent event) throws IOException {
-        Stage stage=(Stage) search_btn.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass()
-                .getResource("LogOut.fxml"));
-        Scene scene1 = new Scene(root2);
-        stage.setScene(scene1);
-        stage.show();
     }
     
     @FXML
@@ -109,6 +101,7 @@ public class After_log_InController implements Initializable {
         Stage stage=(Stage) btn_infoOnFarming.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass().getResource("Farming_info.fxml"));
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         stage.show();
     }
@@ -119,6 +112,7 @@ public class After_log_InController implements Initializable {
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("Quiz.fxml"));
         Parent root2 = (Parent)fxmlloader.load();     
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         QuizController qc=fxmlloader.<QuizController>getController();  
         qc.passOnInfo(firName, lasName);
@@ -131,6 +125,7 @@ public class After_log_InController implements Initializable {
         Stage stage=(Stage) btn_infoOnAnimalInfo.getScene().getWindow();
         Parent root2 = FXMLLoader.load(getClass().getResource("Animal_farming_info.fxml"));
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         stage.show();
     }
@@ -147,7 +142,14 @@ public class After_log_InController implements Initializable {
     }
 
     @FXML
-    private void goToHomePaage(ActionEvent event) {
+    private void goToHomePaage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("after_log_in.fxml"));
+        Parent root2 = (Parent) fxmlLoad.load();
+        Scene scene1 = new Scene(root2);
+        Stage stage = new Stage();
+        scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        stage.show();
     }
 
     @FXML
@@ -163,19 +165,15 @@ public class After_log_InController implements Initializable {
 
     @FXML
     private void exitFromMenu(ActionEvent event) {
+        Platform.exit();
     }
 
     @FXML
-    private void goOnline(ActionEvent event) {
+    private void goOnline(ActionEvent event) throws URISyntaxException, IOException {
+        Desktop desktop = Desktop.getDesktop();
+        desktop.browse(new URI("http://almanac.com/plants"));
     }
 
-    @FXML
-    private void viewAboutApp(ActionEvent event) {
-    }
-
-    @FXML
-    private void viewAboutCompany(ActionEvent event) {
-    }
 
     
 }
