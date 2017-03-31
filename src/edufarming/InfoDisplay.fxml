@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.InfoDisplayController">
-   <children>
-      <TextArea fx:id="descriptionArea" editable="false" layoutX="406.0" layoutY="243.0" prefHeight="268.0" prefWidth="200.0" wrapText="true" />
-      <Label layoutX="167.0" layoutY="43.0" prefHeight="42.0" prefWidth="331.0" style="-fx-text-fill: #a9d755;" text=" General Farming Information">
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.InfoDisplayController">
+   <stylesheets>
+        <URL value="@myCSS.css" />
+   </stylesheets>
+    <children>
+      <TextArea fx:id="descriptionArea" editable="false" layoutX="482.0" layoutY="245.0" prefHeight="268.0" prefWidth="200.0" wrapText="true" />
+      <Label layoutX="165.0" layoutY="22.0" prefHeight="42.0" prefWidth="384.0" style="-fx-text-fill: #a9d755;" text="Crop/ Animal Farming Information">
          <font>
             <Font name="Century Gothic Bold" size="22.0" />
          </font>
       </Label>
       <ScrollPane layoutX="22.0" layoutY="82.0">
          <content>
-            <TextArea fx:id="text_Area_farm" editable="false" prefHeight="433.0" prefWidth="373.0" wrapText="true">
+            <TextArea fx:id="text_Area_farm" editable="false" prefHeight="433.0" prefWidth="448.0" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -36,15 +38,8 @@
          </image>
       </ImageView>
       <Button fx:id="back_btn" layoutX="42.0" layoutY="522.0" mnemonicParsing="false" onAction="#backOpt" prefHeight="25.0" prefWidth="80.0" text="Back" />
-      <TextField fx:id="txt_search" layoutX="213.0" layoutY="18.0" prefHeight="25.0" prefWidth="151.0" />
-      <Button fx:id="search_btn" layoutX="332.0" layoutY="18.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="32.0" text="Q" />
-      <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="188.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="cropAninName" fitHeight="150.0" fitWidth="201.0" layoutX="405.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
-      <Text layoutX="441.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="CENTER" wrappingWidth="114.13671875">
+      <ImageView fx:id="cropAninName" fitHeight="150.0" fitWidth="201.0" layoutX="477.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="525.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="CENTER" wrappingWidth="114.13671875">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

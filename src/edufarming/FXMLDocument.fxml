@@ -38,7 +38,7 @@
          <font>
             <Font name="Century Gothic Bold" size="14.0" />
          </font></Button>
-      <TextArea fx:id="display" layoutX="85.0" layoutY="226.0" prefHeight="244.0" prefWidth="530.0" />
+      <TextArea fx:id="display" editable="false" layoutX="85.0" layoutY="226.0" prefHeight="244.0" prefWidth="530.0" wrapText="true" />
       <Button fx:id="btn_logIn" layoutX="25.0" layoutY="533.0" mnemonicParsing="false" onAction="#logIn" text="Log In" textFill="#555a32">
          <font>
             <Font name="System Bold" size="14.0" />

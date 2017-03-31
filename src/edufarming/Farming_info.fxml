@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.Farming_infoController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="617.0">
+      <AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="687.0">
          <children>
             <Label layoutX="143.0" layoutY="44.0" prefHeight="42.0" prefWidth="331.0" style="-fx-text-fill: #a9d755;" text=" General Farming Information">
                <font>
@@ -22,7 +22,7 @@
                   <Font name="Century Gothic Bold" size="19.0" />
                </font>
             </Label>
-            <TextArea fx:id="text_Area_farm" layoutX="85.0" layoutY="144.0" prefHeight="361.0" prefWidth="493.0">
+            <TextArea fx:id="text_Area_farm" layoutX="22.0" layoutY="99.0" prefHeight="406.0" prefWidth="634.0">
                <font>
                   <Font size="14.0" />
                </font>

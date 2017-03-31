@@ -38,8 +38,6 @@ public class After_log_InController implements Initializable {
     @FXML
     private ImageView logo;
     @FXML
-    private TextField txt_search;
-    @FXML
     private Button btn_FAQs;
     @FXML
     private Button btn_infoFromExpFarmers;
@@ -58,7 +56,6 @@ public class After_log_InController implements Initializable {
     String lasName="";
     @FXML
     private Text txt_DisplayName;
-    @FXML
     private Button search_btn;
     @FXML
     private MenuItem hm_page;
@@ -88,7 +85,7 @@ public class After_log_InController implements Initializable {
     @FXML
     private void back(ActionEvent event) throws IOException {
         Stage stage=(Stage) btn_back.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root2 = FXMLLoader.load(getClass().getResource("LogInController.fxml"));
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
@@ -98,11 +95,14 @@ public class After_log_InController implements Initializable {
     
     @FXML
     private void infoFarming(ActionEvent event) throws IOException {
-        Stage stage=(Stage) btn_infoOnFarming.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("Farming_info.fxml"));
+        Stage stage=(Stage) btn_quiz.getScene().getWindow();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("Farming_info.fxml"));
+        Parent root2 = (Parent)fxmlloader.load();     
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
+        Farming_infoController fc=fxmlloader.<Farming_infoController>getController();  
+        fc.passOnInfo(firName, lasName);
         stage.show();
     }
 
@@ -122,11 +122,14 @@ public class After_log_InController implements Initializable {
 
     @FXML
     private void animInfo(ActionEvent event) throws IOException {
-        Stage stage=(Stage) btn_infoOnAnimalInfo.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("Animal_farming_info.fxml"));
+        Stage stage=(Stage) btn_quiz.getScene().getWindow();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("Animal_farming_info.fxml"));
+        Parent root2 = (Parent)fxmlloader.load();     
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
+        Animal_farming_infoController ac=fxmlloader.<Animal_farming_infoController>getController();  
+        ac.passOnInfo(firName, lasName);
         stage.show();
     }
     public void passOnInfo(String fName, String lName){
@@ -137,9 +140,6 @@ public class After_log_InController implements Initializable {
         txt_DisplayName.setText(firName+"."+lasName.charAt(0));
 }
 
-    @FXML
-    private void search(ActionEvent event) {
-    }
 
     @FXML
     private void goToHomePaage(ActionEvent event) throws IOException {
@@ -154,10 +154,10 @@ public class After_log_InController implements Initializable {
 
     @FXML
     private void logoutFromMenu(ActionEvent event) throws IOException{
+        Stage stage=(Stage) btn_infoOnAnimalInfo.getScene().getWindow();
         FXMLLoader fxmlLoad = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
         Parent root2 = (Parent) fxmlLoad.load();
         Scene scene1 = new Scene(root2);
-        Stage stage = new Stage();
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         stage.show();

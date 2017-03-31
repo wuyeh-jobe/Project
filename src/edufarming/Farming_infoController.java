@@ -38,6 +38,8 @@ public class Farming_infoController implements Initializable {
     @FXML
     private Button back_btn;
     
+    String lasName = "";
+    String firName = "";
     int i=1;
 
     /**
@@ -120,9 +122,17 @@ public class Farming_infoController implements Initializable {
     @FXML
     private void backOpt(ActionEvent event) throws IOException {
         Stage stage=(Stage) back_btn.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("after_log_In.fxml"));
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("after_log_In.fxml"));
+        Parent root2 = (Parent)fxmlloader.load();     
         Scene scene1 = new Scene(root2);
         stage.setScene(scene1);
+        After_log_InController al=fxmlloader.<After_log_InController>getController();  
+        al.passOnInfo(firName, lasName);
+        al.setUsername();
         stage.show();
+    }
+     public void passOnInfo(String fName, String lName){
+        lasName = lName;
+        firName = fName;
     }
 }

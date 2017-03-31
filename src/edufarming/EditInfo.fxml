@@ -29,12 +29,6 @@
             <Font name="System Bold Italic" size="19.0" />
          </font>
       </Text>
-      <TextField layoutX="286.0" layoutY="36.0" />
-      <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="256.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images.png" />
-         </image>
-      </ImageView>
       <Button fx:id="btn_back" layoutX="32.0" layoutY="544.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="75.0" text="Back" textFill="#ab1e1e">
          <font>
             <Font name="System Bold" size="12.0" />

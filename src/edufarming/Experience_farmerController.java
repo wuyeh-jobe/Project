@@ -99,7 +99,16 @@ public class Experience_farmerController implements Initializable {
 
 
     @FXML
-    private void visitDatabase(ActionEvent event) {
+    private void visitDatabase(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn_inventoryKeeping.getScene().getWindow();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("FarmersForum.fxml"));
+        Parent root2 = (Parent) fxmlloader.load();
+        Scene scene1 = new Scene(root2);
+        stage.setScene(scene1);
+        FarmersForumController ff = fxmlloader.<FarmersForumController>getController();
+        ff.passOnInfo(firName, lasName);
+        ff.setUsername();
+        stage.show();
     }
 
     @FXML

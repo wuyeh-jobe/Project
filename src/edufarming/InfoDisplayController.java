@@ -39,10 +39,6 @@ public class InfoDisplayController implements Initializable {
     private Button prev;
     @FXML
     private Button back_btn;
-    @FXML
-    private TextField txt_search;
-    @FXML
-    private Button search_btn;
     String descrip;
     java.sql.Connection conn = null;
     @FXML
@@ -80,9 +76,6 @@ public class InfoDisplayController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void search(ActionEvent event) {
-    }
 
     public void setDescription(String data) {
         descrip = data;
