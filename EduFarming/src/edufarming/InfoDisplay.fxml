@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.InfoDisplayController">
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.InfoDisplayController">
    <children>
-      <TextArea fx:id="descriptionArea" editable="false" layoutX="406.0" layoutY="243.0" prefHeight="268.0" prefWidth="200.0" wrapText="true" />
+      <TextArea fx:id="descriptionArea" editable="false" layoutX="455.0" layoutY="245.0" prefHeight="268.0" prefWidth="200.0" wrapText="true" />
       <Label layoutX="167.0" layoutY="43.0" prefHeight="42.0" prefWidth="331.0" style="-fx-text-fill: #a9d755;" text=" General Farming Information">
          <font>
             <Font name="Century Gothic Bold" size="22.0" />
@@ -21,15 +21,15 @@
       </Label>
       <ScrollPane layoutX="22.0" layoutY="82.0">
          <content>
-            <TextArea fx:id="text_Area_farm" editable="false" prefHeight="433.0" prefWidth="373.0" wrapText="true">
+            <TextArea fx:id="text_Area_farm" editable="false" prefHeight="433.0" prefWidth="419.0" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
-      <Button fx:id="next" layoutX="382.0" layoutY="522.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="94.0" text="Next" />
-      <Button fx:id="prev" layoutX="497.0" layoutY="522.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="25.0" prefWidth="80.0" text="Previous" />
+      <Button fx:id="next" layoutX="459.0" layoutY="522.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="25.0" prefWidth="94.0" text="Next" />
+      <Button fx:id="prev" layoutX="575.0" layoutY="522.0" mnemonicParsing="false" onAction="#prevPage" prefHeight="25.0" prefWidth="80.0" text="Previous" />
       <ImageView blendMode="MULTIPLY" fitHeight="78.0" fitWidth="105.0" layoutX="15.0" layoutY="15.0">
          <image>
             <Image url="@logo.png" />
@@ -43,7 +43,7 @@
             <Image url="@images.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="cropAninName" fitHeight="150.0" fitWidth="201.0" layoutX="405.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cropAninName" fitHeight="150.0" fitWidth="201.0" layoutX="453.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
       <Text layoutX="441.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="CENTER" wrappingWidth="114.13671875">
          <font>
             <Font name="System Bold Italic" size="12.0" />

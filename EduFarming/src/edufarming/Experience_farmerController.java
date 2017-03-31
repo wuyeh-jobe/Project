@@ -188,7 +188,7 @@ public class Experience_farmerController implements Initializable {
     @FXML
     private void goToHomePaage(ActionEvent event) throws IOException {
         Stage stage = (Stage) search_btn.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("Experience_farmerController.fxml"));
+        Parent root2 = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
