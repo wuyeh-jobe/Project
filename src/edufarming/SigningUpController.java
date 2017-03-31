@@ -118,7 +118,6 @@ public class SigningUpController implements Initializable {
         char[] arr2 = txt_lname.getText().toCharArray();
         String chx = "!@#$%^&*()";
         boolean test = false;
-        System.out.println(arr1[0]);
         for (int i = 0; i < arr1.length; i++) {
             if (chx.indexOf(arr1[i]) != -1) {
                 test=true;
