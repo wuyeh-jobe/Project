@@ -198,7 +198,7 @@ public class Animal_farming_infoController implements Initializable {
     @FXML
     private void goOnline(ActionEvent event) throws URISyntaxException, IOException {
         Desktop desktop = Desktop.getDesktop();
-        desktop.browse(new URI("http://almanac.com/advice"));//change this to animal
+        desktop.browse(new URI("https://www.dosomething.org/us/facts/11-facts-about-animals-and-factory-farms"));//change this to animal
     }
     
 }
