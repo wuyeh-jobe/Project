@@ -162,6 +162,20 @@ public class After_log_InController implements Initializable {
         desktop.browse(new URI("http://almanac.com/plants"));
     }
 
+    @FXML
+    private void infoFromExpFarmers(ActionEvent event) throws IOException {
+        Stage stage=(Stage) btn_quiz.getScene().getWindow();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("farmersforum2.fxml"));
+        Parent root2 = (Parent)fxmlloader.load();     
+        Scene scene1 = new Scene(root2);
+        //scene1.getStylesheets().add("myCSS.css");
+        stage.setScene(scene1);
+        Farmersforum2Controller ac=fxmlloader.<Farmersforum2Controller>getController();  
+        ac.passOnInfo(firName, lasName);
+        ac.setInfo();
+        stage.show();
+    }
+
 
     
 }
