@@ -35,7 +35,7 @@ import javax.imageio.ImageIO;
 /**
  * FXML Controller class
  *
- * @author study
+ * @author Wayne
  */
 public class AddInformationController implements Initializable {
     
@@ -87,7 +87,7 @@ public class AddInformationController implements Initializable {
     @FXML
     private void addInform(ActionEvent event) throws IOException {
         /*the information to be added is to be appended to the database-->
-        *still under construction
+        *works
         */
         initialize();
         String title = title_bar.getText();
@@ -122,12 +122,11 @@ public class AddInformationController implements Initializable {
     }
 
     @FXML
+    /**
+     * action for the back button
+     */
     private void go_back(ActionEvent event) throws IOException {
         Stage stage=(Stage) addinfo_btn.getScene().getWindow();
-        /*Parent root = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
-        Scene scene1 = new Scene(root);
-        stage.setScene(scene1);
-        stage.show();*/
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("experience_farmer.fxml"));
         Parent root2 = (Parent)fxmlloader.load();     
         Scene scene1 = new Scene(root2);
@@ -138,6 +137,7 @@ public class AddInformationController implements Initializable {
         stage.show();
     }
     
+    //connecting to the database
     public void initialize() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
