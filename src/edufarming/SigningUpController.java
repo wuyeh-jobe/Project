@@ -74,6 +74,8 @@ public class SigningUpController implements Initializable {
     private Label header_label2;
     @FXML
     private Label txt_alert;
+    String lname="";
+    String fname="";
 
     /**
      * Initializes the controller class.
@@ -116,7 +118,8 @@ public class SigningUpController implements Initializable {
         char[] arr2 = txt_lname.getText().toCharArray();
         String chx = "!@#$%^&*()";
         boolean test = false;
-        for (int i = 0; i < arr1.length || i < arr2.length; i++) {
+        System.out.println(arr1[0]);
+        for (int i = 0; i < arr1.length; i++) {
             if (chx.indexOf(arr1[i]) != -1) {
                 test=true;
             }
@@ -135,16 +138,26 @@ public class SigningUpController implements Initializable {
                 String status = cb_farmingStatus.getValue();
                 if (cb_farmingStatus.getValue().equalsIgnoreCase("New To Farming")) {
                     Stage stage = (Stage) btn_back.getScene().getWindow();
-                    Parent root = FXMLLoader.load(getClass().getResource("after_log_In.fxml"));
+                    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("after_log_In.fxml"));
+                    Parent root = (Parent)fxmlloader.load();
                     Scene scene1 = new Scene(root);
+                    scene1.getStylesheets().add("myCSS.css");
                     stage.setScene(scene1);
+                    After_log_InController al=fxmlloader.<After_log_InController>getController();
+                    al.passOnInfo(fname, lname);
+                    al.setUsername();
                     stage.show();
                 }
                 if (cb_farmingStatus.getValue().equalsIgnoreCase("Experienced Farmer")) {
                     Stage stage1 = (Stage) btn_back.getScene().getWindow();
-                    Parent root2 = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
-                    Scene scene2 = new Scene(root2);
-                    stage1.setScene(scene2);
+                    FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("experience_farmer.fxml"));
+                    Parent root = (Parent)fxmlloader.load();
+                    Scene scene1 = new Scene(root);
+                    scene1.getStylesheets().add("myCSS.css");
+                    stage1.setScene(scene1);
+                    Experience_farmerController ef=fxmlloader.<Experience_farmerController>getController();
+                    ef.passOnInfo(fname, lname);
+                    ef.setUsername();
                     stage1.show();
 
                 }
@@ -176,7 +189,7 @@ public class SigningUpController implements Initializable {
         char[] arr2 = txt_lname.getText().toCharArray();
         String chx = "!@#$%^&*()";
         boolean test = false;
-        for (int i = 0; i < arr1.length || i < arr2.length; i++) {
+        for (int i = 0; i < arr1.length; i++) {
             if (chx.indexOf(arr1[i]) != -1) {
                 test=true;
             }
@@ -241,5 +254,6 @@ public class SigningUpController implements Initializable {
         }
         return x;
     }
+    
 
 }
