@@ -76,7 +76,7 @@ public class FarmersForumController implements Initializable {
                     "jdbc:mysql://localhost/ICP?user=root&password=root");
             System.out.println("Connection established");
             java.sql.Statement s = conn.createStatement();
-            java.sql.ResultSet r = s.executeQuery("SELECT * FROM information WHERE cropName = 'Cabbage'");
+            java.sql.ResultSet r = s.executeQuery("SELECT * FROM information WHERE cropName = 'Beans'");
             while (r.next()) {
                 String info = r.getString("cropName").toUpperCase() + "\n\nPlanting:\n\n" + r.getString("planting")
                         + "\n\nNuture/Care:\n\n" + r.getString("care") + "\n\nPest and Disease:\n\n" + r.getString("pest_diseases")
