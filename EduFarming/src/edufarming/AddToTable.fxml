@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.AddToTableController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="82.0" fitWidth="112.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="#51cfaf" layoutX="206.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventories" textAlignment="CENTER" wrappingWidth="285.13671875">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_logOut" layoutX="569.0" layoutY="25.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="104.0" text="Log Out" />
+      <Text fx:id="txt_DisplayName" layoutX="444.0" layoutY="45.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="peter" textAlignment="CENTER" wrappingWidth="94.13671875">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Text>
+      <TextField layoutX="276.0" layoutY="26.0" />
+      <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="246.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="23.0" layoutY="130.0" prefHeight="336.0" prefWidth="349.0">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="90.0" text="Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="84.0" text="Quantiy" />
+            <TableColumn fx:id="colPrice" prefWidth="81.0" text="Price" />
+            <TableColumn fx:id="colDate" prefWidth="93.0" text="Date" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_back" layoutX="128.0" layoutY="25.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="75.0" text="Back" textFill="#ab1e1e">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_deleteInfo" layoutX="33.0" layoutY="521.0" mnemonicParsing="false" onAction="#deleteInfo" prefHeight="25.0" prefWidth="191.0" text="Delete Information" />
+      <TextField fx:id="txt_productName" layoutX="475.0" layoutY="218.0" prefHeight="25.0" prefWidth="168.0" />
+      <TextField fx:id="txt_quantity" layoutX="475.0" layoutY="273.0" prefHeight="25.0" prefWidth="168.0" />
+      <TextField fx:id="txt_price" layoutX="475.0" layoutY="322.0" prefHeight="25.0" prefWidth="168.0" />
+      <DatePicker fx:id="txt_date" layoutX="475.0" layoutY="370.0" prefHeight="25.0" prefWidth="168.0" />
+      <Button fx:id="btn_addInfo" layoutX="284.0" layoutY="475.0" mnemonicParsing="false" onAction="#addInfo" prefHeight="25.0" prefWidth="191.0" text="Add Information" />
+      <Button fx:id="btn_viewTable" layoutX="33.0" layoutY="475.0" mnemonicParsing="false" onAction="#viewTable" prefHeight="25.0" prefWidth="191.0" text="View Pie Chart" />
+      <Button fx:id="btn_editInfo" layoutX="284.0" layoutY="521.0" mnemonicParsing="false" onAction="#editInfo" prefHeight="25.0" prefWidth="191.0" text="Edit Information" />
+   </children>
+</AnchorPane>

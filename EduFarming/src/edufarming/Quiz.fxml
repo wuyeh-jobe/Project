@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edufarming.QuizController">
+   <children>
+      <TextArea layoutX="36.0" layoutY="124.0" prefHeight="478.0" prefWidth="653.0" />
+      <Text layoutX="59.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. You have a wide range of seeds and grains on a farm, what do you do with ''feed grains''?" />
+      <RadioButton fx:id="rb1" layoutX="82.0" layoutY="172.0" mnemonicParsing="false" text="Grains you throw out">
+         <toggleGroup>
+            <ToggleGroup fx:id="one" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb2" layoutX="82.0" layoutY="198.0" mnemonicParsing="false" text="Grains grown to be fed to animals" toggleGroup="$one" />
+      <RadioButton fx:id="rb3" layoutX="82.0" layoutY="224.0" mnemonicParsing="false" text="Use them to plant next years harvests" toggleGroup="$one" />
+      <Text layoutX="59.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. What is farmstead?" />
+      <RadioButton fx:id="rb4" layoutX="82.0" layoutY="288.0" mnemonicParsing="false" text="All of the farmland given by the government">
+         <toggleGroup>
+            <ToggleGroup fx:id="two" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb5" layoutX="82.0" layoutY="312.0" mnemonicParsing="false" text="The farmland that you are able to use for crops and animals" toggleGroup="$two" />
+      <RadioButton fx:id="rb6" layoutX="82.0" layoutY="335.0" mnemonicParsing="false" text="The farmland and the building on it" toggleGroup="$two" />
+      <Text layoutX="59.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. What is a heifer" />
+      <RadioButton fx:id="rb7" layoutX="78.0" layoutY="397.0" mnemonicParsing="false" text="Another name for a bull">
+         <toggleGroup>
+            <ToggleGroup fx:id="three" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb8" layoutX="78.0" layoutY="422.0" mnemonicParsing="false" text="A female cow that has not given birth to a calf" toggleGroup="$three" />
+      <RadioButton fx:id="rb9" layoutX="78.0" layoutY="447.0" mnemonicParsing="false" text="an older cow that cannot produce milk anymore" toggleGroup="$three" />
+      <Text layoutX="59.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. How much milk does the average cow produce in a day?" />
+      <RadioButton fx:id="rb10" layoutX="86.0" layoutY="506.0" mnemonicParsing="false" text="2 gallons">
+         <toggleGroup>
+            <ToggleGroup fx:id="four" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb11" layoutX="86.0" layoutY="530.0" mnemonicParsing="false" text="7 gallons" toggleGroup="$four" />
+      <RadioButton fx:id="rb12" layoutX="86.0" layoutY="554.0" mnemonicParsing="false" text="5 gallons" toggleGroup="$four" />
+      <Button fx:id="btn_back" layoutX="502.0" layoutY="559.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Button fx:id="btn_next" layoutX="609.0" layoutY="559.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <ImageView fx:id="logo" fitHeight="82.0" fitWidth="112.0" layoutX="33.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="#51cfaf" layoutX="220.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIZ" textAlignment="CENTER" wrappingWidth="285.13671875">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_logOut" layoutX="598.0" layoutY="44.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="104.0" text="Log Out" />
+      <Text fx:id="txt_DisplayName" layoutX="475.0" layoutY="63.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="peter" textAlignment="CENTER" wrappingWidth="94.13671875">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
