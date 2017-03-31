@@ -35,7 +35,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="info_txtArea" layoutX="14.0" layoutY="100.0" prefHeight="454.0" prefWidth="671.0" />
+      <TextArea fx:id="info_txtArea" editable="false" layoutX="14.0" layoutY="100.0" prefHeight="454.0" prefWidth="671.0" />
       <Button fx:id="next_btn" layoutX="638.0" layoutY="523.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="41.0" text="Next" />
       <Button fx:id="prev_btn" layoutX="591.0" layoutY="523.0" mnemonicParsing="false" onAction="#previous" prefHeight="25.0" prefWidth="41.0" text="Prev" />
    </children>

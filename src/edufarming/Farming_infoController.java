@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author study
+ * @author Wayne Gakuo
  */
 public class Farming_infoController implements Initializable {
 
@@ -44,6 +44,7 @@ public class Farming_infoController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * connects to the database
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -75,6 +76,12 @@ public class Farming_infoController implements Initializable {
 
     }    
 
+    /**
+     * 
+     * @param button event for next
+     * auto-increment feature in the database
+     * as it moves next
+     */
     @FXML
     private void nextPage(ActionEvent event) {
         String x = "SELECT * FROM farmers_Info where id="+i;
@@ -96,7 +103,13 @@ public class Farming_infoController implements Initializable {
             System.out.println(e);
         }  
     }
-
+    
+    /**
+     * 
+     * @param button event for previous
+     * auto-decrement in the database
+     * as it accesses previous files
+     */
     @FXML
     private void prevPage(ActionEvent event) {
         if (i>1){
@@ -118,7 +131,12 @@ public class Farming_infoController implements Initializable {
             System.out.println(e);
         }
     }
-
+    
+    /**
+     * 
+     * @param button action for back
+     * @throws IOException 
+     */
     @FXML
     private void backOpt(ActionEvent event) throws IOException {
         Stage stage=(Stage) back_btn.getScene().getWindow();

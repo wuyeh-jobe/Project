@@ -24,7 +24,7 @@ import java.sql.*;
 /**
  * FXML Controller class
  *
- * @author study
+ * @author Wayne Gakuo
  */
 public class Animal_farming_infoController implements Initializable {
 
@@ -45,6 +45,7 @@ public class Animal_farming_infoController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * connects to the database
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -76,7 +77,11 @@ public class Animal_farming_infoController implements Initializable {
          
         
     }    
-
+    /**
+     * 
+     * @param button action for next
+     * an auto incrementing feature in the database
+     */
     @FXML
     private void nextPage(ActionEvent event) {
         String x = "SELECT * FROM anim_farming where id="+i;
@@ -98,7 +103,11 @@ public class Animal_farming_infoController implements Initializable {
             System.out.println(e);
         }  
     }
-
+    
+    /**
+     * 
+     * @param button action for previous
+     */
     @FXML
     private void prevPage(ActionEvent event) {
         if (i>1){
@@ -120,7 +129,12 @@ public class Animal_farming_infoController implements Initializable {
             System.out.println(e);
         }
     }
-
+    
+    /**
+     * 
+     * @param button event for back button
+     * @throws IOException 
+     */
     @FXML
     private void backOpt(ActionEvent event) throws IOException {
         Stage stage=(Stage) back_btn.getScene().getWindow();
