@@ -48,9 +48,9 @@
          <font>
             <Font name="System Bold" size="26.0" />
          </font></Label>
-      <Label fx:id="txt_alert" alignment="CENTER" layoutX="236.0" layoutY="161.0" prefHeight="17.0" prefWidth="263.0" textFill="#bf1010">
+      <Label fx:id="txt_alert" alignment="CENTER" layoutX="224.0" layoutY="140.0" prefHeight="38.0" prefWidth="288.0" textFill="#bf1010">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="18.0" />
          </font></Label>
       <ComboBox fx:id="cb_question" layoutX="274.0" layoutY="422.0" prefHeight="25.0" prefWidth="186.0" promptText="Security Questions" />
       <TextField fx:id="txt_answer" layoutX="274.0" layoutY="452.0" prefHeight="25.0" prefWidth="186.0" promptText="Answer" />
