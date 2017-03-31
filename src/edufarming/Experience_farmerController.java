@@ -5,7 +5,10 @@
  */
 package edufarming;
 
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -86,6 +89,7 @@ public class Experience_farmerController implements Initializable {
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("AddInformation.fxml"));
         Parent root2 = (Parent) fxmlloader.load();
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         AddInformationController att = fxmlloader.<AddInformationController>getController();
         att.passOnInfo(firName, lasName);
@@ -104,6 +108,7 @@ public class Experience_farmerController implements Initializable {
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("AddToTable.fxml"));
         Parent root2 = (Parent) fxmlloader.load();
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         AddToTableController att = fxmlloader.<AddToTableController>getController();
         att.passOnInfo(firName, lasName);
@@ -118,6 +123,7 @@ public class Experience_farmerController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass()
                 .getResource("logIn.fxml"));
         Scene scene1 = new Scene(root2);
+        scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
         stage.show();
     }
@@ -165,6 +171,7 @@ public class Experience_farmerController implements Initializable {
                             FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("InfoDisplay.fxml"));
                             Parent root2 = (Parent) fxmlloader.load();
                             Scene scene1 = new Scene(root2);
+                            scene1.getStylesheets().add("myCSS.css");
                             stage.setScene(scene1);
                             InfoDisplayController id = fxmlloader.<InfoDisplayController>getController();
                             id.setDescription(b.getText());
@@ -188,7 +195,7 @@ public class Experience_farmerController implements Initializable {
     @FXML
     private void goToHomePaage(ActionEvent event) throws IOException {
         Stage stage = (Stage) search_btn.getScene().getWindow();
-        Parent root2 = FXMLLoader.load(getClass().getResource("Experience_farmerController.fxml"));
+        Parent root2 = FXMLLoader.load(getClass().getResource("experience_farmer.fxml"));
         Scene scene1 = new Scene(root2);
         scene1.getStylesheets().add("myCSS.css");
         stage.setScene(scene1);
@@ -212,7 +219,9 @@ public class Experience_farmerController implements Initializable {
     }
 
     @FXML
-    private void goOnline(ActionEvent event) {
+    private void goOnline(ActionEvent event) throws URISyntaxException, IOException {
+        Desktop desktop = Desktop.getDesktop();
+        desktop.browse(new URI("http://almanac.com/plants"));
     }
 
 
