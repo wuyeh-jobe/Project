@@ -124,7 +124,7 @@ public class SigningUpController implements Initializable {
         if(test==true){
             txt_alert.setText("Special characters not allowed");
         }
-        else if((year-2017)<18){
+        else if((2017-year)<18){
             txt_alert.setText("Not for persons under 18!");
         }
         else{
